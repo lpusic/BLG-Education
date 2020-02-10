@@ -1,0 +1,23 @@
+contract SkillGranter {
+    address owner_;
+    mapping (address => uint256) public totalNumberOfSkills_; 
+    string[] public allSkills_; 
+    mapping (address => SkillGranter) public Student;
+    
+    event SkillGranted(address to, string skill);
+    
+    constructor() public {  
+        owner_ = msg.sender; 
+    }
+    
+    function grant(address to, string skill) external payable {
+        require(owner_ == msg.sender, 'User is not qualified to grant skills.');
+        totalNumberOfSkills_[to] += 1;
+        allSkills_.push(skill);
+        emit SkillGranted(to, skill);
+    }
+    
+    function SkillsEarned(uint256 index) external view returns(string){
+        return allSkills_[index];
+    }
+}

@@ -1,0 +1,13 @@
+README
+
+In command line run:
+
+% seed-converter-Darwin "seed"
+
+While replacing seed with a starter seed
+This will produce an Ethereum private key
+
+Alternatively,
+
+% chmod 775 run.sh
+./run.sh

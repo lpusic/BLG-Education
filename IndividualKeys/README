@@ -2,12 +2,10 @@ README
 
 In command line run:
 
-% seed-converter-Darwin "seed"
-
-While replacing seed with a starter seed
-This will produce an Ethereum private key
-
-Alternatively,
-
 % chmod 775 run.sh
-./run.sh
+%./run.sh [seed]
+
+Just replace [seed] with desired seed, no punctuation around it. privKey.txt is a new file being created to store the new ETH private key.
+
+
+

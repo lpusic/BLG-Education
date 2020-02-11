@@ -12,10 +12,12 @@ def sign(privateKey, msg):
 	print(signed_message)
 
 def getPrivate():
-
 	file = open('../Keys/PrivateKeyFromRetina/privKey.txt','r') #Opens file that contains just private key
 	privKey = file.readlines()[0]						   #reads in the first line of the file, the private key
 	privKey.replace('\n', '')							   #cut off the /n at the end of the private key
 	file.close()
 
+getPrivate()
+print(privKey)
+sign(privKey,"test")
 #a1 = web3.Account.from_key(0x58ed59957b0dee44ba2e0a2709f20c2a4b6667442c8e149636537dc98e0e5970)
